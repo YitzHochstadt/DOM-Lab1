@@ -29,12 +29,12 @@ const form = document.querySelector('form');
 form.addEventListener('submit', (e) => { e.preventDefault();
     let number = document.getElementById("num");
     let coinNum = Number(number.value);
-    let text = document.getElementById("select");
-    let selected = text.value;
+    let selected = document.getElementById("select").value;
     for (i = 1; i <= coinNum; i++){
         let coins = document.createElement("div");
         coins.innerText = selected;
-        document.body.append(coins);
+        let container = document.getElementById("coinDrop");
+        container.append(coins);
 
         coins.addEventListener("click", (event) => {
             event.target.remove();
@@ -59,4 +59,8 @@ function lightSwitch(){
 document.querySelector(".end").addEventListener("click", lightEnd);
 function lightEnd(){
     bulb.remove();
+    document.querySelector(".on").disabled = true;
+    document.querySelector(".off").disabled = true;
+    document.querySelector(".toggle").disabled = true;
+    document.querySelector(".end").disabled = true;
 }

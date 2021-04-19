@@ -17,22 +17,23 @@
     </section>
 
     <form>
-        <label>How Many?<input id="num" type="number"></label>
+        <label>How Many?<input id="num" type="number" min="1" step="1"></label>
         <label><select id="select">
             <option>Penny</option>
-            <option>Dime</option>
             <option>Nickel</option>
+            <option>Dime</option>
             <option>Quarter</option>
         </select></label>
         <button type="submit">Make Money!</button>
     </form>
+    <section id="coinDrop"></section>
 
-    <section>
+    <section class="bottom">
         <div class="light-bulb">Light Bulb</div>
-        <label><a href="#" id="on" class="on">On</a></label>
-        <label><a href="#" id="off" class="off">Off</a></label>
-        <label><a href="#" id="toggle" class="toggle">Toggle</a></label>
-        <label><a href="#" id="end" class="end">End</a></label>
+        <label><a href="#" class="on light-button">On</a></label>
+        <label><a href="#" class="off light-button">Off</a></label>
+        <label><a href="#" class="toggle light-button">Toggle</a></label>
+        <label><a href="#" class="end light-button">End</a></label>
     </section>
 
     <script src="script.js"></script>
